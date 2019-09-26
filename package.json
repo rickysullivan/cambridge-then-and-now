@@ -34,5 +34,8 @@
     "start-server": "live-server ./ --watch=./css",
     "start": "npm-run-all --parallel css-watch js-watch start-server"
   },
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "dependencies": {
+    "juxtaposejs": "^1.1.6"
+  }
 }
