@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+$primary: #176c94;
+
+@import "../node_modules/bulma/bulma";
+
+.hero-body {
+    background: url("../images/header-toned.jpg") center center no-repeat;
+    background-size: cover;
+}

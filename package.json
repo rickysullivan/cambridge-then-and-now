@@ -1,0 +1,41 @@
+{
+  "author": {
+    "name": "Ricky Sullivan",
+    "email": "ricky@rickysullivan.com.au"
+  },
+  "description": "A simple site to host juxtapose sliders.",
+  "devDependencies": {
+    "autoprefixer": "^9.4.7",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015-ie": "^6.7.0",
+    "bulma": "^0.7.2",
+    "http-server": "^0.11.1",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.1"
+  },
+  "homepage": "",
+  "keywords": [
+    "cambridge",
+    "juxtapose"
+  ],
+  "license": "MIT",
+  "name": "cambirdge-then-and-now",
+  "scripts": {
+    "css-build": "node-sass _sass/main.scss css/main.css",
+    "css-deploy": "npm run css-build && npm run css-postcss",
+    "css-postcss": "postcss --use autoprefixer --output css/main.css css/main.css",
+    "css-watch": "npm run css-build -- --watch",
+    "deploy": "npm run css-deploy && npm run js-build",
+    "js-build": "babel _javascript --out-dir lib",
+    "js-watch": "npm run js-build -- --watch",
+    "start-server": "live-server ./ --watch=./css",
+    "start": "npm-run-all --parallel css-watch js-watch start-server"
+  },
+  "version": "0.0.1",
+  "dependencies": {
+    "juxtaposejs": "^1.1.6"
+  }
+}
